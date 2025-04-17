@@ -1,34 +1,34 @@
 #include <Arduino.h>
-
-
-const int pH_pin = 36;      // pH sensor pin number
-const int turb_pin = 39;    // turbidity sensor pin number
-
-const int inletRelay = 18;  // inlet relay pin number
-const int outletRelay = 19; // outlet relay pin number
-
-const int whiteLED = 25;    // white led pin number
-const int redLED = 26;      // red led pin number
-const int greenLED = 27;    // green led pin number
+#include "config.h"
+#include "Sampler.h"
 
 void setup(){
 
     Serial.begin(115200);
-
-    pinMode(inletRelay, OUTPUT);
-    pinMode(outletRelay, OUTPUT);
-    pinMode(whiteLED, OUTPUT);
-    pinMode(redLED, OUTPUT);
-    pinMode(greenLED, OUTPUT);
-
-    digitalWrite(inletRelay, HIGH);     // relay OFF (active LOW)
-    digitalWrite(outletRelay, HIGH);    // relay OFF (active LOW)
+    initializePins();
 }
 
 void loop(){
+
+    indicateSampling(true);
+    fillChamber();
+
+    float pHComputed = readPHVoltage();
+    float turbComputed = readTurbidityVoltage();
     
-    // // inidicate sampling
-    // digitalWrite(whiteLED, HIGH);
+    Serial.print("pH: ");
+    Serial.print(pHComputed);
+    Serial.print(" | Turbidity: ");
+    Serial.println(turbComputed);
+
+    bool isUnsafe = analyzeSample(pHComputed, turbComputed);
+    displaySamplingStatus(isUnsafe);
+
+    flushChamber();
+
+    indicateSampling(false);
+
+    delay(delayBetweenCycles);
 
     // // fill chamber
     // digitalWrite(inletRelay, LOW);
