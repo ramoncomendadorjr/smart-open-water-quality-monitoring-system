@@ -10,6 +10,7 @@
             "includePath": [
                 "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/include",
                 "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/src",
+                "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/lib/Sampler",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -206,7 +207,7 @@
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/variants/nodemcu-32s",
-                "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/lib/Sampler",
+                "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/lib/WifiandNetwork",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                 "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -247,6 +248,7 @@
                 "path": [
                     "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/include",
                     "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/src",
+                    "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/lib/Sampler",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -443,7 +445,7 @@
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/dio_qspi/include",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/variants/nodemcu-32s",
-                    "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/lib/Sampler",
+                    "/Users/ramonjr.comendador/smart-open-water-quality-monitoring-system/lib/WifiandNetwork",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                     "/Users/ramonjr.comendador/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",

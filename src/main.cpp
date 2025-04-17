@@ -1,11 +1,13 @@
 #include <Arduino.h>
 #include "config.h"
 #include "Sampler.h"
+#include "WifiandNetwork.h"
 
 void setup(){
 
     Serial.begin(115200);
     initializePins();
+    connectWifi();
 }
 
 void loop(){
@@ -23,6 +25,9 @@ void loop(){
 
     bool isUnsafe = analyzeSample(pHComputed, turbComputed);
     displaySamplingStatus(isUnsafe);
+
+    Serial.println("Sending sensor data...");
+    sendToServer(pHComputed, turbComputed);
 
     flushChamber();
 
